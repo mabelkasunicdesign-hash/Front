@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopify Front - Onboarding Step 6</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "primary": "#00654b",
+                    "surface-container": "#eeeeef",
+                    "on-secondary-container": "#616364",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#75d9b3",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fff2f1",
+                    "surface-container-low": "#f3f3f4",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#92f6cf",
+                    "surface-tint": "#006c50",
+                    "on-primary-container": "#d6ffeb",
+                    "secondary": "#5d5e60",
+                    "inverse-surface": "#2f3132",
+                    "secondary-fixed": "#e2e2e3",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9fa",
+                    "on-surface-variant": "#3e4944",
+                    "surface": "#f9f9fa",
+                    "surface-variant": "#e2e2e3",
+                    "on-secondary-fixed": "#1a1c1d",
+                    "secondary-container": "#dfdfe0",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-background": "#1a1c1d",
+                    "primary-fixed-dim": "#75d9b3",
+                    "outline-variant": "#bdc9c2",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#454748",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9fa",
+                    "tertiary-container": "#ae564d",
+                    "on-surface": "#1a1c1d",
+                    "on-primary-fixed": "#002116",
+                    "on-tertiary-fixed-variant": "#7a2e28",
+                    "primary-container": "#008060",
+                    "surface-container-high": "#e8e8e9",
+                    "surface-container-highest": "#e2e2e3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#00513c",
+                    "outline": "#6e7a73",
+                    "on-tertiary-fixed": "#3f0303",
+                    "tertiary": "#8f3f37",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-dim": "#dadadb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-lift {
+            background-color: #ffffff;
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Top Navigation (Shell Invisible for Transactional Flow per Hierarchy) -->
+<header class="bg-[#f9f9fa] flex justify-between items-center w-full px-8 h-16 max-w-full">
+<div class="text-xl font-bold text-[#2f3132] flex items-center gap-2"><a href="../landing page/code.html"><img alt="Shopify Front Logo" class="h-10 w-auto block" src="../../Branding/Asset 8.svg"/></a></div>
+<div class="flex items-center gap-6">
+<span class="text-sm font-medium text-on-surface-variant">Step 6 of 7</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-[#f3f3f4] p-2 rounded-full transition-colors">help_outline</button>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-6 pt-12 pb-32">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<!-- Step Progress Sidebar -->
+<div class="hidden md:block relative pl-8 shrink-0 w-52 sticky top-24">
+<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
+<div class="space-y-10">
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Goal Selection</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Business Setup</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Location &amp; Format</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Duration &amp; Budget</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary-fixed/50 z-10"></div>
+<span class="text-sm text-primary font-medium">What You Get</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Review &amp; Confirm</span>
+</div>
+</div>
+</div>
+<!-- Left Column: Content Anchor -->
+<div class="w-full md:w-4/12 space-y-8 sticky top-24">
+<div class="space-y-4">
+<span class="text-primary tracking-widest text-xs uppercase font-medium">Your Success Suite</span>
+<h1 class="text-5xl font-medium text-inverse-surface tracking-tight leading-[1.1]">
+                        Everything you need to launch and learn.
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed pr-8">
+                        We've architected a supportive environment where high-end commerce meets real-world testing. No friction, just focus.
+                    </p>
+</div>
+<!-- Trust Signal -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-sm font-medium">Shopify Verified Partner</span>
+</div>
+<p class="text-sm text-on-surface-variant">Cancel your trial anytime. No long-term commitments for the first 30 days of your storefront launch.</p>
+</div>
+</div>
+<!-- Right Column: Bento Grid of Services -->
+<div class="w-full md:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Service Card 1 -->
+<div class="surface-container-lowest p-8 rounded-xl tonal-lift flex flex-col gap-6 shadow-[0px_20px_40px_rgba(26,28,29,0.04)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl text-inverse-surface font-medium">Foot traffic exposure</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Position your brand in high-velocity urban corridors with guaranteed minimum daily impressions.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="surface-container-lowest p-8 rounded-xl tonal-lift flex flex-col gap-6 shadow-[0px_20px_40px_rgba(26,28,29,0.04)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl text-inverse-surface font-medium">Customer feedback tools</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Integrated digital touchpoints to capture real-time sentiment from every physical visitor.</p>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="surface-container-lowest p-8 rounded-xl tonal-lift flex flex-col gap-6 shadow-[0px_20px_40px_rgba(26,28,29,0.04)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl text-inverse-surface font-medium">Setup &amp; Staffing support</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our concierge team handles your store assembly and provides trained on-site brand ambassadors.</p>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="surface-container-lowest p-8 rounded-xl tonal-lift flex flex-col gap-6 shadow-[0px_20px_40px_rgba(26,28,29,0.04)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">point_of_sale</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl text-inverse-surface font-medium">POS integration</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sync physical inventory with your Shopify online store automatically via our proprietary POS bridge.</p>
+</div>
+</div>
+<!-- Featured Image Card (Asymmetric Layout) -->
+<div class="sm:col-span-2 relative h-64 rounded-xl overflow-hidden group">
+<img alt="Retail experience" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="Modern high-end retail interior with minimalist wooden shelving soft natural light and clean architectural lines for luxury shopping experience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2LgDkSYj9tDoAgr2H4_rD40-0Pfdg-Gekn3jhN_S0pLtWoucBbcbOmhGOfM8_Ojrw0y_iL27d2Kbq0kfrKEJw_TwbOz02xvZH1fQmN-CfONquCQAKudUCo_KGA5eVqcx83ym7K14B41UAYEC7Xasx55XsYpmlwPpdE-gs-XbrWiRxwFw7JkSkfGu6a35HgciFwED-mlFx-0r5g4Y8x8v3IRNXnEgny-6VO9Z7a40rCcK97hfklBPkNhgBRx4wi-C3IO6WvmjEq88"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<div class="flex items-center gap-3">
+<span class="w-8 h-[1px] bg-white"></span>
+<span class="text-white text-xs tracking-widest uppercase font-medium">The Shopify Standard</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar (Transactional Logic) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-white/80 backdrop-blur-md shadow-[0px_-10px_20px_rgba(26,28,29,0.04)]">
+<a href="../duration_budget_medium_typography/code.html" class="text-[#2f3132] font-['Inter'] font-semibold text-sm px-6 py-3 hover:opacity-90 transition-opacity">
+            Back
+        </a>
+<div class="flex items-center gap-8">
+<a href="../review confirmation/code.html" class="bg-gradient-to-br from-[#00654b] to-[#008060] text-white rounded-xl px-12 py-4 font-['Inter'] font-medium text-sm hover:opacity-90 transition-opacity active:scale-95 shadow-lg shadow-primary/20">
+                Continue
+            </a>
+</div>
+</footer>
+</body></html>

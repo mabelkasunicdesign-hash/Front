@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb4ab",
+                    "primary": "#00654b",
+                    "surface-container": "#eeeeef",
+                    "on-secondary-container": "#616364",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#75d9b3",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#fff2f1",
+                    "surface-container-low": "#f3f3f4",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#92f6cf",
+                    "surface-tint": "#006c50",
+                    "on-primary-container": "#d6ffeb",
+                    "secondary": "#5d5e60",
+                    "inverse-surface": "#2f3132",
+                    "secondary-fixed": "#e2e2e3",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9fa",
+                    "on-surface-variant": "#3e4944",
+                    "surface": "#f9f9fa",
+                    "surface-variant": "#e2e2e3",
+                    "on-secondary-fixed": "#1a1c1d",
+                    "secondary-container": "#dfdfe0",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-background": "#1a1c1d",
+                    "primary-fixed-dim": "#75d9b3",
+                    "outline-variant": "#bdc9c2",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#454748",
+                    "on-error-container": "#93000a",
+                    "background": "#f9f9fa",
+                    "tertiary-container": "#ae564d",
+                    "on-surface": "#1a1c1d",
+                    "on-primary-fixed": "#002116",
+                    "on-tertiary-fixed-variant": "#7a2e28",
+                    "primary-container": "#008060",
+                    "surface-container-high": "#e8e8e9",
+                    "surface-container-highest": "#e2e2e3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#00513c",
+                    "outline": "#6e7a73",
+                    "on-tertiary-fixed": "#3f0303",
+                    "tertiary": "#8f3f37",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-dim": "#dadadb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .goal-option .select-icon {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .goal-option:hover .select-icon,
+        .goal-option.selected .select-icon {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar: Authority Source from JSON -->
+<header class="bg-[#f9f9fa] dark:bg-[#2f3132] flex justify-between items-center w-full px-8 h-16 max-w-full sticky top-0 z-50">
+<div class="text-xl text-[#2f3132] dark:text-[#f9f9fa] flex items-center gap-2 font-medium"><a href="../landing page/code.html"><img alt="Shopify Front Logo" class="h-10 w-auto object-contain" src="../../Branding/Asset 8.svg"/></a></div>
+<div class="flex items-center gap-6">
+<button class="text-[#3e4944] dark:text-[#bdc9c2] hover:bg-[#f3f3f4] dark:hover:bg-[#3e4944] transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-12 pb-28">
+<div class="max-w-4xl w-full flex flex-col md:flex-row gap-12 items-start">
+<!-- Step Progress Sidebar -->
+<div class="hidden md:block relative pl-8 shrink-0 w-52">
+<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
+<div class="space-y-10">
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary-fixed/50 z-10"></div>
+<span class="text-sm text-primary font-medium">Goal Selection</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Business Setup</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Location &amp; Format</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Duration &amp; Budget</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">What You Get</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Review &amp; Confirm</span>
+</div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-grow">
+<!-- Header Section -->
+<div class="mb-10">
+<span class="text-primary text-sm tracking-widest uppercase mb-3 block font-medium">Step 2 of 7</span>
+<h1 class="text-4xl md:text-5xl text-inverse-surface tracking-tight leading-tight mb-6 font-medium">
+                        What is your main objective for this retail test?
+                    </h1>
+<p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+                        We'll help you focus your space and data collection based on your goal.
+                    </p>
+</div>
+<!-- Bento Grid Goal Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Option 1 -->
+<div class="goal-option group relative bg-surface-container-lowest p-8 rounded-xl cursor-pointer hover:bg-surface-container-low transition-all duration-300 ring-2 ring-transparent hover:ring-primary/10 flex flex-col gap-4">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined select-icon" style="font-variation-settings: 'FILL' 0;">radio_button_unchecked</span>
+</div>
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl font-medium" data-icon="verified">verified</span>
+</div>
+<h3 class="text-xl text-inverse-surface font-medium">Validate a product</h3>
+<p class="text-on-surface-variant text-sm">Measure demand and market fit for a specific new item.</p>
+</div>
+<!-- Option 2 (Selected State Mockup) -->
+<div class="goal-option group relative bg-surface-container-lowest p-8 rounded-xl cursor-pointer ring-2 ring-primary shadow-sm selected flex flex-col gap-4">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined select-icon" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl font-medium" data-icon="forum" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<h3 class="text-xl text-inverse-surface font-medium">Gather customer feedback</h3>
+<p class="text-on-surface-variant text-sm">Understand the "why" behind purchasing decisions.</p>
+</div>
+<!-- Option 3 -->
+<div class="goal-option group relative bg-surface-container-lowest p-8 rounded-xl cursor-pointer hover:bg-surface-container-low transition-all duration-300 ring-2 ring-transparent hover:ring-primary/10 flex flex-col gap-4">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined select-icon" style="font-variation-settings: 'FILL' 0;">radio_button_unchecked</span>
+</div>
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl font-medium" data-icon="sell">sell</span>
+</div>
+<h3 class="text-xl text-inverse-surface font-medium">Test pricing</h3>
+<p class="text-on-surface-variant text-sm">Optimize your margins with real-world price sensitivity data.</p>
+</div>
+<!-- Option 4 -->
+<div class="goal-option group relative bg-surface-container-lowest p-8 rounded-xl cursor-pointer hover:bg-surface-container-low transition-all duration-300 ring-2 ring-transparent hover:ring-primary/10 flex flex-col gap-4">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined select-icon" style="font-variation-settings: 'FILL' 0;">radio_button_unchecked</span>
+</div>
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl font-medium" data-icon="campaign">campaign</span>
+</div>
+<h3 class="text-xl text-inverse-surface font-medium">Build brand awareness</h3>
+<p class="text-on-surface-variant text-sm">Focus on impressions and storytelling in a physical space.</p>
+</div>
+</div>
+<!-- Image Placeholder (Contextual) -->
+<div class="mt-12 rounded-2xl overflow-hidden relative h-64 bg-surface-container">
+<img class="w-full h-full object-cover grayscale opacity-40 mix-blend-multiply" data-alt="Modern minimalist high-end boutique interior with ample whitespace and soft architectural lighting reflecting supportive brand tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfxJBop1HAElNPR4_yPhX1zTsVldr7K-eI6o3PY82bYwasR3NT5Kk5AkW8JzlRV16ngKF_w1uZDlawzjERLiP8q-A3l0-xm_d80oxBBez-jbmELzyi0Wj27QmDLU5BeYtUcO9_lp_FUQkoPQhwLYyfy9Whk4qiG_kaQd-ZOWqh5Qq0FHqJq5U11eDUMrUkcJ1kmKdRshRirQxPUS461rQqHwNDeIyM6UalSVJBW9vPf-upAQPKAMEGlYFuEdi_dgGy0Q5sr6mMnPU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 max-w-xs">
+<p class="text-xs text-primary uppercase tracking-tighter mb-1 font-medium">Expert Tip</p>
+<p class="text-sm italic text-on-surface-variant">"Retail tests focused on feedback yield 40% higher long-term customer retention."</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar: Authority Source from JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-white/80 dark:bg-[#2f3132]/80 backdrop-blur-md shadow-[0px_-10px_20px_rgba(26,28,29,0.04)]">
+<a href="../business_setup/code.html" class="text-[#2f3132] dark:text-[#f9f9fa] px-6 py-3 font-['Inter'] text-sm hover:opacity-90 transition-opacity flex items-center gap-2 font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+            Back
+        </a>
+<div class="flex items-center gap-4">
+<a href="../location and format/code.html" class="bg-gradient-to-br from-[#00654b] to-[#008060] text-white rounded-xl px-12 py-4 font-['Inter'] font-medium text-sm hover:opacity-90 transition-opacity active:scale-95 shadow-lg shadow-primary/20">
+                Continue
+            </a>
+</div>
+</nav>
+<script>
+  document.querySelectorAll('.goal-option').forEach(option => {
+    option.addEventListener('click', () => {
+      const selected = option.classList.toggle('selected');
+      option.classList.toggle('ring-primary', selected);
+      option.classList.toggle('shadow-sm', selected);
+      option.classList.toggle('ring-transparent', !selected);
+      const icon = option.querySelector('.select-icon');
+      if (!icon) return;
+      icon.textContent = selected ? 'check_circle' : 'radio_button_unchecked';
+      icon.style.fontVariationSettings = selected ? "'FILL' 1" : "'FILL' 0";
+    });
+  });
+</script>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .thread-line { width: 2px; height: 100%; position: absolute; left: 7px; top: 20px; z-index: 0; }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#ffb4ab",
+            "primary": "#00654b",
+            "surface-container": "#eeeeef",
+            "on-secondary-container": "#616364",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#75d9b3",
+            "on-secondary": "#ffffff",
+            "on-tertiary-container": "#fff2f1",
+            "surface-container-low": "#f3f3f4",
+            "on-error": "#ffffff",
+            "primary-fixed": "#92f6cf",
+            "surface-tint": "#006c50",
+            "on-primary-container": "#d6ffeb",
+            "secondary": "#5d5e60",
+            "inverse-surface": "#2f3132",
+            "secondary-fixed": "#e2e2e3",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f9f9fa",
+            "on-surface-variant": "#3e4944",
+            "surface": "#f9f9fa",
+            "surface-variant": "#e2e2e3",
+            "on-secondary-fixed": "#1a1c1d",
+            "secondary-container": "#dfdfe0",
+            "tertiary-fixed": "#ffdad6",
+            "on-background": "#1a1c1d",
+            "primary-fixed-dim": "#75d9b3",
+            "outline-variant": "#bdc9c2",
+            "inverse-on-surface": "#f0f1f2",
+            "on-secondary-fixed-variant": "#454748",
+            "on-error-container": "#93000a",
+            "background": "#f9f9fa",
+            "tertiary-container": "#ae564d",
+            "on-surface": "#1a1c1d",
+            "on-primary-fixed": "#002116",
+            "on-tertiary-fixed-variant": "#7a2e28",
+            "primary-container": "#008060",
+            "surface-container-high": "#e8e8e9",
+            "surface-container-highest": "#e2e2e3",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed-variant": "#00513c",
+            "outline": "#6e7a73",
+            "on-tertiary-fixed": "#3f0303",
+            "tertiary": "#8f3f37",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#c6c6c7",
+            "surface-dim": "#dadadb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- Top Navigation Shell (Suppressed as per task context: Onboarding) -->
+<header class="bg-[#f9f9fa] flex justify-between items-center w-full px-8 h-16 max-w-full">
+<div class="text-xl text-[#2f3132] flex items-center gap-2 font-medium"><a href="../landing page/code.html"><img alt="Shopify Front Logo" class="h-10 w-auto object-contain" src="../../Branding/Asset 8.svg"/></a></div>
+<div class="flex items-center gap-4">
+<span class="text-[#3e4944] text-sm font-medium">Step 5 of 7</span>
+<button class="p-2 hover:bg-[#f3f3f4] rounded-full transition-colors">
+<span class="material-symbols-outlined text-[#3e4944]" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center pt-12 pb-28 px-6 lg:px-24">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Thread & Identity -->
+<div class="lg:col-span-4 sticky top-12">
+<!-- Step Progress Sidebar -->
+<div class="relative pl-8">
+<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
+<div class="space-y-10">
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Goal Selection</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Business Setup</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Location &amp; Format</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary-fixed/50 z-10"></div>
+<span class="text-sm text-primary font-medium">Duration &amp; Budget</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">What You Get</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Review &amp; Confirm</span>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(26,28,29,0.06)]">
+<h3 class="text-lg mb-2 font-medium">Supportive Guarantee</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+            Launch your storefront with zero long-term commitment. You can pause or scale your budget at any time. We're here to help you grow efficiently.
+          </p>
+<div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+            No hidden platform fees
+          </div>
+</div>
+</div>
+<!-- Right Column: Interactive Content -->
+<div class="lg:col-span-8 flex flex-col gap-10">
+<section>
+<h1 class="text-4xl lg:text-5xl tracking-tight text-inverse-surface mb-6 leading-tight font-medium">
+            Choose your duration <br/>and see your estimate.
+          </h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Select the engagement window that fits your current goals. Our supportive architect approach ensures maximum ROI for every stage.
+          </p>
+</section>
+<!-- Bento Grid Selection -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Option 1 -->
+<label class="group relative cursor-pointer">
+<input checked="" class="peer sr-only" name="duration" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-lowest border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary-container/5 transition-all duration-300">
+<span class="text-primary block mb-2 font-medium">3 Days</span>
+<h4 class="text-xl text-inverse-surface mb-4 font-medium">Weekend test</h4>
+<p class="text-sm text-on-surface-variant mb-6">Perfect for validating a niche or testing a seasonal campaign with low friction.</p>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs uppercase tracking-wider font-medium">Starting at</span>
+<span class="text-lg font-medium">$1,200</span>
+</div>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="duration" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-lowest border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary-container/5 transition-all duration-300">
+<span class="text-primary block mb-2 font-medium">1 Week</span>
+<h4 class="text-xl text-inverse-surface mb-4 font-medium">Deep dive</h4>
+<p class="text-sm text-on-surface-variant mb-6">Comprehensive data gathering across multiple demographics for better insight.</p>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs uppercase tracking-wider font-medium">Starting at</span>
+<span class="text-lg font-medium">$2,800</span>
+</div>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="group relative cursor-pointer">
+<input class="peer sr-only" name="duration" type="radio"/>
+<div class="h-full p-8 rounded-xl bg-surface-container-lowest border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary-container/5 transition-all duration-300">
+<span class="text-primary block mb-2 font-medium">2 Weeks</span>
+<h4 class="text-xl text-inverse-surface mb-4 font-medium">Market entry</h4>
+<p class="text-sm text-on-surface-variant mb-6">Full scale market presence designed to establish authority and drive initial sales.</p>
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs uppercase tracking-wider font-medium">Starting at</span>
+<span class="text-lg font-medium">$5,500</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Dynamic Cost Section (Glassmorphism) -->
+<div class="relative overflow-hidden rounded-2xl p-1 bg-gradient-to-br from-primary to-primary-container">
+<div class="bg-surface-container-lowest/95 backdrop-blur-md rounded-[calc(1rem-2px)] p-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex-grow">
+<h3 class="text-2xl text-inverse-surface mb-2 font-medium">Estimated Total: $1,200</h3>
+<p class="text-on-surface-variant">Includes storefront setup, curated ad placements, and real-time dashboard access.</p>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<div class="flex -space-x-2 mb-4">
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="portrait of a successful business professional smiling with confidence and warm ambient office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6c9FGxaDVdxqPnZWSGRT917DTPIHIpV31ods8W69A9kQFYxPfvxTdLuCVOG9_69Hct6LRn4awsweSYGPlNpPeGo_v5EQ328xg1XYLEPHjXFWCjgMMk_mK-GZOc0g6_OlLnUYGNj1Y72RgRy8cN3ZlTTLza42dU3X6qVVt0RN1kA4BZoBF1sxt2WUEm8Ud68MMEmOdPPTvqlkgJKCE0GpT0nlFimPw-yNwiMb8HfIbz6kerIp4CtJuU0i_frbKcDtu30NOaQkiYc0"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="modern abstract graphic representation of data growth and success using soft teal and green shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmTczkRTVNXkORdJN5rp22XYU7xQ7Tu04AogAkElFOp8vDfo12qSqRcfGRFqm3Y2vvASg3qFHKqKQ6Kc2H_KjxKc2oV9QWeIwkacuKh7G4gF_dVxHDHFQV8v1CvFqGFyMgrieI6fOmE90lvzQ0S2GYYJt9h_A3RPwpQiZ8QjgwV53RzPTdgexXrBaAWhRBXbxT8ObQOhSzvwJp9Av0VcpqxRieUgzej6LyLNp59qWfLWgsr1nb88zO3N83WIaDdW7B9bAO_ndtQjc"/>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-xs text-on-secondary-container border-2 border-white font-medium">+4</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Recently joined from your region</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-white/80 dark:bg-[#2f3132]/80 backdrop-blur-md shadow-[0px_-10px_20px_rgba(26,28,29,0.04)]">
+<a href="../location and format/code.html" class="px-6 py-3 text-[#2f3132] text-sm hover:opacity-90 transition-opacity active:scale-95 font-medium">
+      Back
+    </a>
+<div class="flex items-center gap-6">
+<a href="../what you get/code.html" class="bg-gradient-to-br from-[#00654b] to-[#008060] text-white rounded-xl px-12 py-4 font-['Inter'] font-medium text-sm hover:opacity-90 transition-opacity active:scale-95 shadow-lg shadow-primary/20">
+        Continue
+      </a>
+</div>
+</footer>
+<!-- Padding for fixed footer -->
+<div class="h-32"></div>
+</body></html>

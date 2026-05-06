@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "tertiary-fixed-dim": "#ffb4ab",
+                  "primary": "#00654b",
+                  "surface-container": "#eeeeef",
+                  "on-secondary-container": "#616364",
+                  "on-tertiary": "#ffffff",
+                  "on-primary": "#ffffff",
+                  "inverse-primary": "#75d9b3",
+                  "on-secondary": "#ffffff",
+                  "on-tertiary-container": "#fff2f1",
+                  "surface-container-low": "#f3f3f4",
+                  "on-error": "#ffffff",
+                  "primary-fixed": "#92f6cf",
+                  "surface-tint": "#006c50",
+                  "on-primary-container": "#d6ffeb",
+                  "secondary": "#5d5e60",
+                  "inverse-surface": "#2f3132",
+                  "secondary-fixed": "#e2e2e3",
+                  "error-container": "#ffdad6",
+                  "surface-bright": "#f9f9fa",
+                  "on-surface-variant": "#3e4944",
+                  "surface": "#f9f9fa",
+                  "surface-variant": "#e2e2e3",
+                  "on-secondary-fixed": "#1a1c1d",
+                  "secondary-container": "#dfdfe0",
+                  "tertiary-fixed": "#ffdad6",
+                  "on-background": "#1a1c1d",
+                  "primary-fixed-dim": "#75d9b3",
+                  "outline-variant": "#bdc9c2",
+                  "inverse-on-surface": "#f0f1f2",
+                  "on-secondary-fixed-variant": "#454748",
+                  "on-error-container": "#93000a",
+                  "background": "#f9f9fa",
+                  "tertiary-container": "#ae564d",
+                  "on-surface": "#1a1c1d",
+                  "on-primary-fixed": "#002116",
+                  "on-tertiary-fixed-variant": "#7a2e28",
+                  "primary-container": "#008060",
+                  "surface-container-high": "#e8e8e9",
+                  "surface-container-highest": "#e2e2e3",
+                  "surface-container-lowest": "#ffffff",
+                  "on-primary-fixed-variant": "#00513c",
+                  "outline": "#6e7a73",
+                  "on-tertiary-fixed": "#3f0303",
+                  "tertiary": "#8f3f37",
+                  "error": "#ba1a1a",
+                  "secondary-fixed-dim": "#c6c6c7",
+                  "surface-dim": "#dadadb"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Inter"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .step-thread {
+      position: relative;
+    }
+    .step-thread::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 2px;
+      height: 40px;
+      background: #bdc9c2;
+      transform: translateX(-50%);
+    }
+    .glass-effect {
+      background: rgba(249, 249, 250, 0.8);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation Shell (Onboarding Context: No Navigation Items) -->
+<header class="bg-[#f9f9fa] dark:bg-[#2f3132] flex justify-between items-center w-full px-8 h-16 max-w-full z-50">
+<div class="text-xl font-bold text-[#2f3132] dark:text-[#f9f9fa] flex items-center gap-2">
+<a href="../landing page/code.html"><img alt="Logo" class="h-10 w-auto object-contain" src="../../Branding/Asset 8.svg"/></a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#3e4944] dark:text-[#bdc9c2] hover:bg-[#f3f3f4] dark:hover:bg-[#3e4944] transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center px-6 py-12 md:py-20 max-w-7xl mx-auto w-full">
+<!-- Main Content Layout: Asymmetric Bento Style -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full items-start">
+<!-- Step Progress Sidebar -->
+<div class="hidden lg:block lg:col-span-3 relative pl-8 pt-4">
+<div class="absolute left-0 top-0 bottom-0 w-0.5 bg-outline-variant/30"></div>
+<div class="space-y-10">
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary border-4 border-surface z-10"></div>
+<span class="text-sm text-on-surface-variant font-medium">Goal Selection</span>
+</div>
+<div class="relative flex items-center gap-4">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary-fixed/50 z-10"></div>
+<span class="text-sm text-primary font-medium">Business Setup</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Location &amp; Format</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Duration &amp; Budget</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">What You Get</span>
+</div>
+<div class="relative flex items-center gap-4 opacity-30">
+<div class="absolute -left-[35px] w-3.5 h-3.5 rounded-full bg-outline-variant border-4 border-surface z-10"></div>
+<span class="text-sm font-medium">Review &amp; Confirm</span>
+</div>
+</div>
+</div>
+<!-- Left Editorial Column -->
+<div class="lg:col-span-4 pt-4">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-medium font-headline text-inverse-surface leading-[1.1] mb-6 tracking-tight">
+          Tell us about <span class="text-primary">your brand.</span>
+</h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+          Tell us a bit about your brand so we can tailor the retail experience to your needs. No commitment, just a better start.
+        </p>
+<!-- Trust Mark Component -->
+<div class="mt-12 p-6 bg-surface-container-low rounded-xl border-none flex items-start gap-4 max-w-sm">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<div>
+<p class="font-semibold text-inverse-surface">Low-risk setup</p>
+<p class="text-sm text-on-surface-variant mt-1">Your data is secured with enterprise-grade Shopify encryption.</p>
+</div>
+</div>
+</div>
+<!-- Right Interaction Column (Card-based) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0px_20px_40px_rgba(26,28,29,0.06)]">
+<form class="space-y-8">
+<!-- Input: Business Name -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1" for="business-name">Business Name</label>
+<input class="w-full px-6 py-4 bg-surface-container-highest border-none rounded-md focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all outline-none text-lg" id="business-name" placeholder="e.g. The Green Studio" type="text"/>
+</div>
+<!-- Input: Category Dropdown -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1" for="category">Category</label>
+<div class="relative">
+<select class="w-full appearance-none px-6 py-4 bg-surface-container-highest border-none rounded-md focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all outline-none text-lg" id="category">
+<option disabled="" selected="" value="">Select your industry</option>
+<option value="fashion">Fashion &amp; Apparel</option>
+<option value="beauty">Beauty &amp; Cosmetics</option>
+<option value="home">Home &amp; Decor</option>
+<option value="electronics">Electronics</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Divider with Text -->
+<div class="relative py-4 flex items-center">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-4 text-xs font-bold text-outline uppercase tracking-widest">Or</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<!-- Shopify Connection Option -->
+<a href="../shopify connect/code.html" class="w-full flex items-center justify-between p-5 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-xl group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-[#95bf47]/10 flex items-center justify-center rounded-lg">
+<img alt="Shopify Logo" class="w-7 h-7 object-contain" src="../../Branding/Asset 3.svg"/>
+</div>
+<div class="text-left">
+<p class="font-bold text-inverse-surface">Connect your Shopify store</p>
+<p class="text-sm text-on-surface-variant">Sync your inventory and settings instantly</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+</a>
+</form>
+</div>
+<!-- Decorative Image Section / Visual Trust -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch">
+<div class="p-8 md:w-1/2 flex flex-col justify-center">
+<h3 class="text-xl font-bold mb-2">Designed for builders.</h3>
+<p class="text-sm text-on-surface-variant mb-6">Our Supportive Architect approach ensures your store feels editorial and high-end from day one.</p>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<div class="md:w-1/2 h-48 md:h-auto min-h-[200px]">
+<img alt="Retail Experience" class="w-full h-full object-contain p-12 bg-white" data-alt="Minimalist high-end retail boutique interior with warm lighting, wooden accents, and soft shadows, editorial photography style" src="../../Branding/Asset 3.svg"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Action Bar) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-white/80 dark:bg-[#2f3132]/80 backdrop-blur-md shadow-[0px_-10px_20px_rgba(26,28,29,0.04)]">
+<a href="../landing page/code.html" class="text-[#2f3132] dark:text-[#f9f9fa] px-6 py-3 font-['Inter'] font-semibold text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+<span>Back</span>
+</a>
+<div class="flex items-center gap-4">
+<a href="../goal selection/code.html" class="bg-gradient-to-br from-[#00654b] to-[#008060] text-white rounded-xl px-12 py-4 font-['Inter'] font-medium text-sm hover:opacity-90 transition-opacity active:scale-95 shadow-lg shadow-primary/20">
+        Continue
+      </a>
+</div>
+</footer>
+<!-- Spacer for fixed footer -->
+<div class="h-28"></div>
+</body></html>
