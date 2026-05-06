@@ -14,17 +14,20 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        @keyframes validate-shimmer {
-            0%   { background-position: -200% center; }
-            100% { background-position: 200% center; }
+        .hero-animated-wrapper {
+            display: inline-block;
+            position: relative;
+            min-width: 7rem;
         }
-        .validate-shimmer {
-            background: linear-gradient(90deg, #75d9b3 0%, #ffffff 45%, #75d9b3 55%, #75d9b3 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: validate-shimmer 2.8s linear infinite;
+        .hero-animated-word {
+            display: inline-block;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .hero-animated-word--hidden {
+            transform: translateY(-0.75rem);
+            opacity: 0;
         }
     </style>
 <script id="tailwind-config">
@@ -163,7 +166,7 @@
 <div class="relative z-10 max-w-5xl w-full text-center mb-16">
 <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-surface-container-lowest tracking-tight leading-[1.1] mb-8 font-medium">
                 Your brand belongs in the world. <br/>
-<span class="text-primary-fixed">Don't guess. <span class="validate-shimmer">Validate.</span></span>
+<span class="text-primary-fixed">Don't guess. <span class="hero-animated-wrapper"><span id="hero-animated-word" class="hero-animated-word">Validate.</span></span></span>
 </h1>
 <p class="font-body text-xl md:text-2xl text-outline-variant max-w-3xl mx-auto leading-relaxed">
                 Capture the human data digital analytics can't see. Move from spreadsheets to street corners with Shopify's retail intelligence layer.
@@ -260,4 +263,20 @@
 <p class="text-outline-variant/50 text-xs">Â© 2024 Shopify Front Inc. Empowering the next generation of physical commerce. All rights reserved.</p>
 </div>
 </footer>
+<script>
+(function () {
+    var words = ["Validate.", "Test.", "Learn.", "Connect.", "Interact."];
+    var el = document.getElementById("hero-animated-word");
+    var idx = 0;
+    function cycleWord() {
+        el.classList.add("hero-animated-word--hidden");
+        setTimeout(function () {
+            idx = (idx + 1) % words.length;
+            el.textContent = words[idx];
+            el.classList.remove("hero-animated-word--hidden");
+        }, 400);
+    }
+    if (el) { setInterval(cycleWord, 2200); }
+})();
+</script>
 </body></html>
