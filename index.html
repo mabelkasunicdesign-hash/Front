@@ -14,6 +14,18 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        @keyframes validate-shimmer {
+            0%   { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .validate-shimmer {
+            background: linear-gradient(90deg, #75d9b3 0%, #ffffff 45%, #75d9b3 55%, #75d9b3 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: validate-shimmer 2.8s linear infinite;
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -86,6 +98,47 @@
     </script>
 </head>
 <body class="bg-inverse-surface text-on-surface overflow-x-hidden">
+
+<!-- Entry Animation Overlay -->
+<div id="entry-animation" style="position:fixed;inset:0;z-index:9999;background:#030a06;overflow:hidden;">
+  <iframe
+    id="entry-iframe"
+    src="entry%20animation/banners/1728x1117_door%20closed%20crip/index.html"
+    width="1728"
+    height="1117"
+    frameborder="0"
+    scrolling="no"
+    style="border:none;position:absolute;top:50%;left:50%;transform-origin:center center;"
+  ></iframe>
+  <button
+    id="skip-btn"
+    onclick="dismissEntry()"
+    style="position:absolute;bottom:28px;right:28px;background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.25);padding:8px 22px;border-radius:20px;cursor:pointer;font-family:Inter,sans-serif;font-size:13px;z-index:1;backdrop-filter:blur(8px);letter-spacing:0.02em;"
+  >Skip</button>
+</div>
+<script>
+(function() {
+  var overlay = document.getElementById('entry-animation');
+  var iframe  = document.getElementById('entry-iframe');
+
+  function scale() {
+    var s = Math.max(window.innerWidth / 1728, window.innerHeight / 1117);
+    iframe.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
+  }
+  scale();
+  window.addEventListener('resize', scale);
+
+  window.dismissEntry = function() {
+    overlay.style.transition = 'opacity 0.6s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function() { overlay.remove(); }, 600);
+  };
+
+  // Auto-dismiss after animation completes (3800ms) + 200ms buffer
+  setTimeout(window.dismissEntry, 4000);
+})();
+</script>
+
 <!-- Top Navigation -->
 <nav class="bg-[#2f3132] flex justify-between items-center w-full px-8 h-16 max-w-full fixed top-0 z-50">
 <div class="text-xl text-[#f9f9fa] flex items-center gap-2 font-medium"><img alt="Shopify Front Logo" class="h-8 w-auto object-contain" src="Branding/Asset 3.svg"/></div>
@@ -100,15 +153,19 @@
 </nav>
 <!-- Main Content Area -->
 <main class="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-6">
-<!-- Hero Background Visual (Abstract) -->
-<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
-<div class="absolute -top-[20%] -left-[10%] w-[60%] h-[80%] rounded-full bg-primary-container blur-[120px] font-medium"></div>
-<div class="absolute -bottom-[20%] -right-[10%] w-[50%] h-[70%] rounded-full bg-[#00654b] blur-[100px]"></div>
+<!-- Hero Background Video -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20">
+    <source src="Branding/website intro.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-inverse-surface/40 via-transparent to-inverse-surface/80"></div>
+  <div class="absolute -top-[20%] -left-[10%] w-[60%] h-[80%] rounded-full bg-primary-container blur-[120px] opacity-10"></div>
+  <div class="absolute -bottom-[20%] -right-[10%] w-[50%] h-[70%] rounded-full bg-[#00654b] blur-[100px] opacity-10"></div>
 </div>
 <div class="relative z-10 max-w-5xl w-full text-center mb-16">
 <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-surface-container-lowest tracking-tight leading-[1.1] mb-8 font-medium">
                 Your brand belongs in the world. <br/>
-<span class="text-primary-fixed">Don't guess. Validate.</span>
+<span class="text-primary-fixed">Don't guess. <span class="validate-shimmer">Validate.</span></span>
 </h1>
 <p class="font-body text-xl md:text-2xl text-outline-variant max-w-3xl mx-auto leading-relaxed">
                 Capture the human data digital analytics can't see. Move from spreadsheets to street corners with Shopify's retail intelligence layer.
